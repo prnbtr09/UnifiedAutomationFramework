@@ -1,20 +1,27 @@
 package runners;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
-public class SmokeRunner {
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
-    @Test(groups = {"smoke"})
-    public void smoke(){
-        System.out.println("In smoke");
-    }
+@CucumberOptions(
+        features = {"src/test/resources/features"},
+        tags = "@ui",
+        glue = {"stepDefs"},
+        plugin ={"pretty", "html:target/site/cucumber-pretty",
+                "json:target/jsonreports/cucumber.json",
+                "summary"}
+//        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 
-    @Test(groups = {"regression"})
-    public void regression(){
-        System.out.println("In Regression");
+)
+public class SmokeRunner extends AbstractTestNGCucumberTests{
+
+
+    @Override
+    @DataProvider(parallel = false)
+    public Object[][] scenarios() {
+        return super.scenarios();
     }
 
 }

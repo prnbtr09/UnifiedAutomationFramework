@@ -9,5 +9,8 @@
         <module name="FrameworkFromScratchByPrince" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="RestAPI" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

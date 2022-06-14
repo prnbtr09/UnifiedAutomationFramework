@@ -2,11 +2,8 @@ package stepDefs;
 
 import driverManager.Configurations;
 import driverManager.ConfigureDriver;
-import driverManager.CreateDriver;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.cucumber.java.en.Given;
-import org.openqa.selenium.WebDriver;
 
 public class BaseStepDef {
     private Configurations configurations;

@@ -1,6 +1,6 @@
 package stepDefs;
 
-import driverManager.CreateDriver;
+import driverManager.drivers.CreateDriver;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +16,6 @@ public class LoginStepDef {
 
     @Given("user has launched url {string}")
     public void launchApplication(String url){
-
         driver.get(url);
     }
 

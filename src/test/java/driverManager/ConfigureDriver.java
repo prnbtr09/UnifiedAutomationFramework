@@ -1,10 +1,10 @@
 package driverManager;
 
+import driverManager.drivers.CreateDriver;
 import org.openqa.selenium.WebDriver;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-import static driverManager.Configurations.*;
 
 public class ConfigureDriver {
     public WebDriver driver;

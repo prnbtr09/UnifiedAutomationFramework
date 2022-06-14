@@ -1,10 +1,9 @@
 package stepDefs;
 
-import driverManager.CreateDriver;
+import driverManager.drivers.CreateDriver;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebDriver;
 import pageObjects.HomePageObjects;
-import pageObjects.LoginPageObjects;
 
 public class HomePageStepDef {
     WebDriver driver= CreateDriver.getInstance().getDriver();
