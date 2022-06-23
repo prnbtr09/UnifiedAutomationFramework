@@ -1,11 +1,11 @@
-package pageObjects;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPageObjects extends BasePageObjects {
+public class LoginPage extends BasePage {
 
-    public LoginPageObjects(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 

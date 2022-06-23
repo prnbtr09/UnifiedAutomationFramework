@@ -1,6 +1,7 @@
+@ui @login
 Feature: Home functionality
 
-  @ui @login
+
   Scenario: Login to app
     Given user has launched url "https://www.saucedemo.com/"
     And user has logged in to application using following credentials
@@ -8,5 +9,5 @@ Feature: Home functionality
       | standard_user | secret_sauce |
 
 
-    Scenario: Add to cart on Home Page
-      Given user click on "Add to cart"
+#    Scenario: Add to cart on Home Page
+#      Given user click on "Add to cart"

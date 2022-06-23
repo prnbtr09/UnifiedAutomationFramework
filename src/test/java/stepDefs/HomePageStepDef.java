@@ -3,15 +3,15 @@ package stepDefs;
 import driverManager.drivers.CreateDriver;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebDriver;
-import pageObjects.HomePageObjects;
+import pages.HomePage;
 
 public class HomePageStepDef {
     WebDriver driver= CreateDriver.getInstance().getDriver();
-    HomePageObjects homePageObjects;
+    HomePage homePageObjects;
 
     @Given("user click on {string}")
     public void clickElement(String option){
-        homePageObjects=new HomePageObjects(driver);
+        homePageObjects=new HomePage(driver);
         homePageObjects.addToCart.click();
 
     }

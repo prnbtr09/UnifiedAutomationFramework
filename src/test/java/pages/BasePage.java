@@ -1,15 +1,15 @@
-package pageObjects;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class BasePageObjects {
+public class BasePage {
 
 
 public WebDriver driver;
 
-    public BasePageObjects(WebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver=driver;
     }
 

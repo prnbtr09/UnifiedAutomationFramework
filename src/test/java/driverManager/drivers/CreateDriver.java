@@ -6,35 +6,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CreateDriver {
-    public static CreateDriver instance;
+    private static final ThreadLocal<CreateDriver> instance=new ThreadLocal<>();
     public WebDriver driver;
-   Map<String,String> environmentBrowserMap=new HashMap<>();
+    Map<String, String> environmentBrowserMap = new HashMap<>();
 
     private CreateDriver() {
     }
 
     public final void setDriver(String browser, String environment) throws Exception {
-        environmentBrowserMap.put(browser,environment);
-        driver=new GetDriver().getDriver(browser).getDriver();
+        environmentBrowserMap.put(browser, environment);
+        driver = new GetDriver().getDriver(browser,environment).getDriver();
         this.setDriver(driver);
     }
 
     public static CreateDriver createInstance() {
-        if (null == instance) {
-            instance = new CreateDriver();
+        if (null == instance.get()) {
+            instance.set(new CreateDriver());
         }
 
-        return instance;
+        return instance.get();
     }
 
-    public static CreateDriver getInstance(){
+    public static CreateDriver getInstance() {
         return createInstance();
     }
 
 
-    public static void setInstance(CreateDriver instance) {
-        CreateDriver.instance = instance;
-    }
 
     public WebDriver getDriver() {
         return driver;

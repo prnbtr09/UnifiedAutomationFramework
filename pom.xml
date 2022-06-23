@@ -73,7 +73,7 @@
                             <configuration>
 <!--                                <reportsDirectory>${project.build.directory}/jsonreports</reportsDirectory>-->
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>smoke.xml</suiteXmlFile>
+                                    <suiteXmlFile>testng.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                         </plugin>
